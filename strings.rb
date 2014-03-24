@@ -21,3 +21,10 @@ puts
 #exclamations  ---> contains?
 print poem.include? "text"
 puts
+
+
+#general delimited strings
+puts %{Ruby is fun.}  #equivalent to "Ruby is fun."
+puts %Q{ Ruby is fun. } #equivalent to " Ruby is fun. "
+puts %q[Ruby is fun.]  #equivalent to a single-quoted string
+#puts %x!ls! #equivalent to back tick command output `ls`
