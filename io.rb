@@ -37,3 +37,36 @@ puts myFile2
 
 File.open("modes.txt", "r") {|file| puts file.read }
 puts myFile2
+
+puts "using file descriptor"
+# open the file "new-fd" and create a file descriptor:
+fd = IO.sysopen("manga.txt", "a+")
+
+# create a new I/O stream using the file descriptor for "new-fd":
+p IO.new(fd)
+
+puts "Standard Inputs/Outputs"
+p STDOUT.class
+p STDOUT.fileno
+  
+p STDIN.class
+p STDIN.fileno
+
+p STDERR.class 
+p STDERR.fileno
+
+
+#use sysread to open a file
+#Use syswrite to write to the file
+puts "Using sysread"
+
+aFile = File.new("input.txt", "r")
+MyFile3 = File.new("manga.txt","a+")
+
+MyFile3.syswrite"Added"
+if MyFile3
+  puts MyFile3.sysread(20)
+ 
+else
+  puts "Unable to open file!"
+end

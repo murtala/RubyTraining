@@ -1,0 +1,1 @@
+#use rescue for exceptions

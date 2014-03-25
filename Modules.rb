@@ -11,23 +11,37 @@
 # A module can have no subclasses.
 # A module is defined by module ... end.
 
-module MyModule
+module MyModule_1
   class MyClass_1
     def Class_1_Method_1
-      puts "method 1"
+      puts "Mod1,Class1,method 1"
     end
     def Class_1_Method_2
-      puts "method 2"
-    end
-  end
-
-  class MyClass_2
-    def Class_2_Method_1
-      puts "method 1"
-    end
-    def Class_2Method_2
-      puts "method 2"
+      puts "Mod1,Class1,method 2"
     end
   end
 end
+#require "MyModule_1"
+  
+
+
+module MyModule_2
+  class MyClass_1
+    def Class_1_Method_1
+      puts "Mod2,Class1,method 1"
+    end
+    def Class_1_Method_2
+      puts "Mod2,Class2,method 2"
+    end
+  end
+end
+#require "MyModule_2"
+  
+var1 = MyModule_1::MyClass_1.new
+puts var1.Class_1_Method_1
+ x =MyModule_1.new
+#varx = MyModule::MyClass_1.new
+#puts varx.Class_1_Method_1
+
+
 

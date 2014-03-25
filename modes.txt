@@ -25,3 +25,5 @@ Mode |  Meaning
 -----+--------------------------------------------------------
  "t" |  Text file mode (may appear with
      |  any of the key letters listed above except "b").Inserted stuff.
+Inserted stuff.
+Inserted stuff.
